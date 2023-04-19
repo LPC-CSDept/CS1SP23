@@ -8,25 +8,25 @@ g++ --std=c++11 v1.cpp
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include <cstdlib>
+#include <ctime>
+#include <algorithm>
 using namespace std;
 
+void makeVector(vector<int> &);
 void insertOne(vector<int> &, int);
 int deleteOne(vector<int> &, int);
 void printVector(vector<int>);
 
 int main()
 {
-	vector<int> number{5, 15, 20, 30, 35};
-	// vector<int> number;
-	// number.push_back(5);
-	// number.push_back(15);
-	// number.push_back(20);
-	// number.push_back(30);
-	// number.push_back(35);
+	// vector<int> number{5, 15, 20, 30, 35};
+	vector<int> number(10);
 	int insval, delval;
 
 	// cout << "Enter your insertion value: ";
 	// cin >> insval;
+	makeVector(number);
 	printVector(number);
 	insval = 25;
 	insertOne(number, insval);
@@ -72,4 +72,11 @@ void printVector(vector<int> number)
 		cout << setw(5) << val << "\t";
 	}
 	cout << endl;
+}
+
+void makeVector(vector<int> &number)
+{
+	for (int i = 0; i < number.size(); i++)
+		number[i] = random() % 20;
+	sort(number.begin(), number.end());
 }
