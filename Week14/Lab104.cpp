@@ -73,7 +73,19 @@ void stringCopy(char dest[], const char source[])
 		dest[i] = source[i++];
 	dest[i] = '\0';
 }
-int stringLength(const char str[])
+int stringLength(const char src[])
 {
-	int while (source[i++] != '\0')
+	// int strlength, i = 0;
+	// while (src[i++] != '\0')
+	// {
+	// 	strlength = strlength + 1;
+	// }
+
+	// return strlength;
+
+	int i = 0;
+	while (src[i++] != '\0')
+		;
+
+	return i;
 }
