@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 const int MAXSIZE = 5000;
